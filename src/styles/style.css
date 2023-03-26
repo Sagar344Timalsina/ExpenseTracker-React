@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.main-container {
+    max-width: 80%;
+    background-color: rgb(134, 127, 119);
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.header>.upper-header {
+    font-size: 2rem;
+    color: burlywood;
+}
+
+.header>.lower-header {
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    color: aliceblue;
+    font-size: 24px;
+}
+
+.lower-header-one {
+    flex-wrap: wrap;
+
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.lower-header-two {
+    flex-wrap: wrap;
+
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+
+}
+
+select {
+    border-radius: 5px;
+}
+
+:focus {
+    border: none;
+}
+
+.btn-button {
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: 5px;
+
+    border: none;
+    font-size: 24px;
+
+}
+
+.btn-button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#update-expense {
+    display: none;
+}
+
+.wrapper-table {
+    max-width: 80%;
+    background-color: bisque;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-content {
+    max-width: 80%;
+
+    padding: 1rem;
+
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+}
+
+table {
+    width: 35rem;
+    border-collapse: collapse;
+}

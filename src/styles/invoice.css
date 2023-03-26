@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main-container-invoice{
+    max-width: 60%;
+    margin: 1rem auto;
+    background-color: antiquewhite;
+}
+.header{
+    padding: 1rem;
+}
+.below-header{
+    padding: 2rem;
+}
+.table-content {
+    width: 100%;
+
+    padding: 1rem;
+
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+}
+
+table {
+    margin: auto;
+   width:75%; 
+    border-collapse: collapse;
+}
+.total-menu{
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 1rem;
+}
+.btn-new,.btn-pdf{
+    padding: 1rem;
+}
+#total{
+    visibility: hidden;
+}

@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import "../styles/style.css"
-import { db } from '../config/firebase';
+import { auth, db } from '../config/firebase';
 import { useNavigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+
 import { getDocs, getDoc, collection, addDoc, deleteDoc, doc, updateDoc } from 'firebase/firestore';
+
 
 
 const HomePage = () => {
@@ -22,6 +25,7 @@ const HomePage = () => {
     // const [updatedDate, setUpdatedDate] = useState("");
     // const [updatedAmount, setUpdatedAmount] = useState("");
     const [tracker, setTracker] = useState([]);
+    // const [authUser,setAuthUser]=useAuthState();
 
     const trackerCollection = collection(db, "tracker");
 
@@ -140,11 +144,17 @@ const HomePage = () => {
     const handleChangePage=()=>{
         navigate('/invoice');
     }
+    const handleLogout=async()=>{
+    await signOut(auth);
+    navigate('/login');
+    }
 
     return (
         <>
             <div className="main-container">
+            
                 <header className="header">
+                <button className='btn-logout' onClick={handleLogout}>Logut</button>
                     <div className="upper-header">
                         <h1>Expense Tracker App</h1>
                     </div>

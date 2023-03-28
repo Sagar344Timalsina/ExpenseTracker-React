@@ -22,13 +22,7 @@ const InvoicePage = () => {
         getData();
     },[])
 
-    // const downloadInvoive=()=>{
-    //     let div = document.querySelector(".main-container-invoice");
-    //     let btn = document.querySelector("#btn-pdf");
-    //     btn.addEventListener('click', () => {
-    //         html2pdf().from(div).save();
-    //     })
-    // }
+
 
     return (
         <div className="main-container-invoice">
@@ -80,6 +74,7 @@ const InvoicePage = () => {
                 <hr />
                 <h4 id="total">   {
                        tracker.map((track) => {
+                        console.log(typeof(track.amount))
                         return  sum+=(parseInt(track.amount)) 
                        } ) 
                     }</h4>
@@ -87,9 +82,7 @@ const InvoicePage = () => {
                    
                     <h1>Total::{sum}</h1>
                 </div>
-                <div className="btn-pdf">
-                    <button id="btn-pdf" >Download PDF</button>
-                </div>
+               
                 <div className="btn-new">
                     <button id="btn-new" onClick={()=>navigate('/')}>New Records</button>
                 </div>
